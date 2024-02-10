@@ -3,6 +3,7 @@ pub fn add(left: usize, right: usize) -> usize {
 }
 
 #[cfg(test)]
+
 mod tests {
     use super::*;
 
@@ -11,4 +12,7 @@ mod tests {
         let result = add(2, 2);
         assert_eq!(result, 4);
     }
+
+   // mod type_tests;
+   // mod stats_tests;
 }

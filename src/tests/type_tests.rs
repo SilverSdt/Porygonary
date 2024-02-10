@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod type_tests {
-    use super::Type;
+    use crate::types::Type;
 
     #[test]
     fn test_get_multiplier() {
