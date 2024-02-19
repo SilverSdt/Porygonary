@@ -1,53 +1,75 @@
-# **Porygonary - PokemonSimulator**
+# Porygonary - Pokemon Simulator
 
-## Author
-[Jérémy Bodart](https://jeremy.bodart.dev)
+- [Porygonary - Pokemon Simulator](#porygonary---pokemon-simulator)
+  - [Planned Features for v1.0.0](#planned-features-for-v100)
+  - [Overview](#overview)
+    - [Understanding Types](#understanding-types)
+    - [Understanding Moves](#understanding-moves)
+    - [Understanding Abilities](#understanding-abilities)
+    - [Understanding Pokemon](#understanding-pokemon)
+  - [Contributors](#contributors)
+  - [License](#license)
 
-## Description
-Porygonary - Pokemon Simulator is a rust project with goal to give tool to simulate a pokemon battle like a real pokemon game.
+## Planned Features for v1.0.0
 
-## V1.0.0 Features
-- Type
-- Move
-- Abilite
-- Pokemon
-- Damage Calculation
+- Accurate damage calculation
+- Full support for types, including dual types, resistances, weaknesses, and immunities
+- Full support for moves
+- Abilities
+- Pre-made Pokemon
 
-### What is a type ?
-A type represented a element (fire, grass, water...) that have weakness, resistance or immunity to a other type.
+## Overview
 
-**for examples:**
-- **Fire** is weak against **water** but resistant to **grass**
-- **Water** is weak against **grass** but resistant to **fire**
-- **Grass** is weak against **fire** but resistant to **water**
+Porygonary is a Rust-based project designed to simulate Pokemon battles with accuracy, mirroring the mechanics of the actual Pokemon games.
 
-if the type is weak, the damage is doubled, if it is resistant, it is divised by 2, and if it is immune, the damage is null.
+### Understanding Types
 
-### What is a move ?
-A move is a special abilitie that can use a pokemon during battle for **inflict damage**, **boost their stats** or **status.**
+In Pokemon, a 'type' represents an element (such as fire, grass, water) that each pokemon can have. Each type has its own strengths and weaknesses against other types.
 
-A move have a **base power**, a **accuracy** and a optional **effect**. A move can be a **special move, physique move or a status move** and it is precise if **contact** is established between him and the other pokemon when using the ability.
+For instance:
 
-### What is a abilitie ?
-A abilities is a passive effect that a pokemon use during battle, their can be positive or negative.
+- **Fire** types are weak to **water** but strong against **grass**
+- **Water** types are weak to **grass** but strong against **fire**
+- **Grass** types are weak to **fire** but strong against **water**
 
-**for exemples:**
-- **Blaze:** Powers up fire-types moves by 50% when the HP falls below a third of its maximum.
-- **Rough Skin:** inflict damage as the opponent pokemon when opponent move make contact and inflict 1/8 of their maximum HP.
-- **Levitate:** immune the pokemon from ground-type moves, spikes, toxic spikes or arena trap.
+If a type is weak to another, damage inflicted is doubled. If it's resistant, damage is halved. If it's immune, no damage is taken.
 
-### What is a pokemon ?
-(_Who doesn't know what is a pokemon?_)
+### Understanding Moves
 
-A pokemon is a creature you can use in battle,
-you can define a pokemon with:
+A 'move' is a special ability that a pokemon can use during battle to **inflict damage**, **boost their stats**, or to **inflict status effects**.
+
+Each move has a **base power**, an **accuracy**, and an optional **effect**. A move can be a **special move**, **physical move**, or a **status move**. It is precise if **contact** is established between the user and the target when using the ability.
+
+### Understanding Abilities
+
+An 'ability' is a passive effect that a pokemon can use in a battle. Abilities have positive and negative effects, and can be triggered in different ways.
+
+For example:
+
+- **Blaze:** Increases the power of fire-type moves by 50% when the Pokemon's HP falls below a third of its maximum.
+- **Rough Skin:** Damages the opponent when they make contact, inflicting damage equal to 1/8 of their maximum HP.
+- **Levitate:** Makes the Pokemon immune to ground-type moves, spikes, toxic spikes and arena trap.
+
+### Understanding Pokemon
+
+(_Who doesn't know what a Pokemon is?_)
+
+A Pokemon is a creature that can be used in battle. Each Pokemon has:
+
 - A **name**
 - 1 or 2 **types**
-- A **level** (1 to 100)
+- A **level** (ranging from 1 to 100)
 - Base **statistics**
-- **IV** (0 to 31 per stats)
-- **EV** (252 max per stats & 510 total max)
-- **Abilitie**
+- **IVs** (Individual Values, ranging from 0 to 31 per stat)
+- **EVs** (Effort Values, up to 252 per stat & 510 in total)
+- An **ability**
 - 1 to 4 **moves**
 
+## Contributors
 
+- [Jérémy Bodart](https://jeremy.bodart.dev)
+- [Joshua Vandaële](https://vandaele.software)
+
+## License
+
+This project is under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
